@@ -1,0 +1,239 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+
+/*===== VARIABLES CSS =====*/
+
+/*=== Colors ===*/
+:root {
+  --first-color: #330000; /* Warna utama */
+  --text-color: #330000; /* Warna teks */
+  --background-color: #e7e7e7; /* Warna background default */
+}
+
+/*=== Fonts and Typography ===*/
+:root {
+  --body-font: "Roboto", sans-serif; /* Font utama */
+  --big-font-size: 3.5rem; /* Ukuran font besar */
+  --normal-font-size: 1rem; /* Ukuran font normal */
+  --smaller-font-size: 0.875rem; /* Ukuran font kecil */
+}
+@media screen and (min-width: 768px) {
+  :root {
+    --big-font-size: 3rem; /* Ukuran font besar untuk layar lebar */
+    --normal-font-size: 1rem; /* Ukuran font normal untuk layar lebar */
+  }
+}
+
+/*===== BASE STYLES =====*/
+*,
+::before,
+::after {
+  box-sizing: border-box; /* Mengatur box-sizing */
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--body-font); /* Menggunakan font utama */
+  color: var(--first-color); /* Menggunakan warna utama */
+  background-color: var(--background-color); /* Warna background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Membuat konten di tengah layar */
+}
+h1 {
+  margin: 0;
+}
+a {
+  text-decoration: none; /* Menghilangkan garis bawah pada tautan */
+}
+img {
+  max-width: 100%;
+  height: auto; /* Mengatur gambar agar responsif */
+}
+
+/*===== FORM STYLES =====*/
+.l-form {
+  position: relative;
+  width: 100%; /* Lebar penuh */
+  max-width: 500px; /* Batas lebar maksimal lebih kecil */
+  padding: 1.5rem; /* Padding untuk form lebih kecil */
+  background-color: var(--background-color); /* Warna background kartu */
+  border-radius: 2.5rem; /* Membuat sudut kartu melengkung */
+  box-shadow: 0 1px 2px #a09090; /* Mengurangi shadow untuk efek kartu lebih minimalis */
+  overflow: hidden; /* Menghindari overflow */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*=== Shapes ===*/
+.shape1,
+.shape2 {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; /* Bentuk lingkaran */
+}
+.shape1 {
+  top: -50px;
+  left: -50px;
+  background: linear-gradient(
+    180deg,
+    var(--first-color) 0%,
+    rgba(57, 0, 0, 0) 100%
+  ); /* Gradien untuk shape1 */
+}
+.shape2 {
+  bottom: -50px;
+  right: -50px;
+  background: linear-gradient(
+    180deg,
+    var(--first-color) 0%,
+    rgba(49, 0, 0, 0) 100%
+  ); /* Gradien untuk shape2 */
+  transform: rotate(180deg); /* Membalik shape2 */
+}
+
+/*=== Form ===*/
+.form {
+  width: 100%; /* Lebar penuh */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem; /* Padding untuk form */
+}
+.form__content {
+  width: 100%; /* Lebar penuh */
+  max-width: 400px; /* Batas lebar maksimal untuk konten form lebih kecil */
+  background-color: transparent; /* Warna background kartu transparan */
+  padding: 0; /* Menghilangkan padding untuk memberikan ruang dalam kartu */
+  border-radius: 1rem; /* Membuat sudut kartu melengkung */
+  box-shadow: none; /* Menghilangkan shadow untuk efek kartu lebih minimalis */
+}
+.form__img {
+  display: block; /* Menampilkan gambar pada form */
+  width: 100px; /* Lebar gambar lebih kecil */
+  margin-bottom: 1rem; /* Jarak bawah gambar */
+}
+.form__title {
+  font-size: var(--big-font-size); /* Ukuran font title */
+  font-weight: 500;
+  margin-bottom: 1rem; /* Jarak bawah title lebih kecil */
+  text-align: center; /* Menengahkan title */
+}
+.form__div {
+  position: relative;
+  display: grid;
+  grid-template-columns: 7% 89%; /* Mengatur layout grid */
+  margin-bottom: 2rem; /* Jarak bawah div lebih kecil */
+  padding: 0.25rem 0;
+  border-bottom: 1px solid var(--text-color); /* Border bawah */
+}
+/*=== Div focus ===*/
+.form__div.focus {
+  border-bottom: 1px solid var(--first-color); /* Border saat focus */
+}
+
+.form__div-one {
+  margin-bottom: 1.5rem; /* Jarak bawah div pertama lebih kecil */
+}
+
+.form__icon {
+  font-size: 1.7rem; /* Ukuran icon */
+  color: var(--text-color); /* Warna icon */
+  transition: 0.3s;
+}
+/*=== Icon focus ===*/
+.form__div.focus .form__icon {
+  color: var(--first-color); /* Warna icon saat focus */
+}
+
+.form__label {
+  display: block;
+  position: absolute;
+  left: 0.75rem;
+  top: 0.25rem;
+  font-size: var(--normal-font-size); /* Ukuran font label */
+  color: var(--text-color); /* Warna label */
+  transition: 0.3s;
+}
+/*=== Label focus ===*/
+.form__div.focus .form__label {
+  top: -1.5rem;
+  font-size: 0.975rem; /* Ukuran font label saat focus */
+  color: var(--first-color); /* Warna label saat focus */
+}
+
+.form__div-input {
+  position: relative;
+}
+.form__input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: none;
+  padding: 0.5rem 0.75rem;
+  font-size: 1.2rem; /* Ukuran font input */
+  color: var(--first-color); /* Warna teks input */
+  transition: 0.3s;
+}
+.form__button {
+  width: 100%;
+  padding: 1rem;
+  font-size: var(--normal-font-size); /* Ukuran font button */
+  outline: none;
+  border: none;
+  margin-bottom: 1.5rem;
+  background-color: var(--first-color); /* Warna background button */
+  color: #ffffff; /* Warna teks button */
+  border-radius: 0.5rem; /* Border radius button */
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: 1; /* Pastikan tombol berada di lapisan terdepan */
+  position: relative; /* Tambahkan ini jika diperlukan untuk mengatasi masalah lapisan */
+}
+.form__button:hover {
+  background-color: #2e0000; /* Warna background button saat hover */
+  box-shadow: 0px 15px 35px rgba(48, 0, 0, 0.779); /* Efek hover button */
+  color: #ad8282; /* Warna teks button saat hover */
+}
+
+/*===== MEDIA QUERIES =====*/
+@media screen and (min-width: 780px) {
+  .shape1 {
+    width: 300px;
+    height: 300px;
+    top: -100px;
+    left: -100px;
+  }
+  .shape2 {
+    width: 300px;
+    height: 300px;
+    bottom: -100px;
+    right: -100px;
+  }
+  .form {
+    padding: 1.5rem; /* Padding untuk form pada layar lebar */
+  }
+  .form__content {
+    width: 100%; /* Lebar penuh */
+    max-width: 480px; /* Lebar maksimal untuk konten form pada layar lebar */
+  }
+  .form__img {
+    width: 150px; /* Lebar gambar lebih besar pada layar lebar */
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .l-form {
+    padding: 5rem 1rem; /* Padding lebih besar di atas dan bawah pada layar kecil */
+  }
+  .form__content {
+    padding: 1rem; /* Tambahkan padding untuk konten form */
+  }
+}

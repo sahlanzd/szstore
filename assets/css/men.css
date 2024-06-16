@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to left, #eaeaea, #ffffff0a);
+  overflow: hidden; /* Menyembunyikan scrollbar */
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-container {
+  text-align: center;
+  padding: 45px;
+  box-sizing: border-box;
+  background: linear-gradient(to left, #eaeaea, #ffffff0a);
+  border-radius: 10px;
+  width: 100%;
+  max-width: 500px;
+  margin: auto; /* Memastikan konten berada di tengah */
+  box-shadow: 0 0 40px rgba(179, 179, 179, 0.865); /* Menambahkan shadow untuk efek depth */
+  border: none; /* Menghilangkan border */
+}
+
+.menu-title {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #420000;
+}
+
+.lottie-player-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+h5 {
+  color: #420000;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  margin: 0;
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+  color: #420000;
+  margin-top: 5%;
+}
+
+button {
+  font-family: "Poppins", sans-serif;
+  border-radius: 25px;
+  background: linear-gradient(to right, #420000, #180000);
+  color: #fff;
+  border: none;
+  position: relative;
+  height: 40px;
+  width: auto;
+  font-size: 20px;
+  padding: 0 5em;
+  cursor: pointer;
+  transition: 900ms ease all;
+  outline: none;
+  margin-top: 5px; /* Menambahkan sedikit jarak antara tombol */
+}
+
+button:hover {
+  background: linear-gradient(to top, #ffffff, #330000ac);
+  color: #560000;
+  border-radius: 55px;
+  box-shadow: 1px 5px 10px rgb(69, 0, 0);
+}
+
+button:before,
+button:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 1px;
+  width: 0;
+  /* background: linear-gradient(to right, #48000c, #3d0019); */
+  transition: 900ms ease all;
+}
+
+button:after {
+  right: inherit;
+  top: inherit;
+  left: 0;
+  bottom: 0;
+}
+
+button:hover:before,
+button:hover:after {
+  width: 100%;
+  transition: 800ms ease all;
+}
+
+@media screen and (max-width: 768px) {
+  button {
+    font-size: 18px;
+    padding: 0 1.5em;
+    height: 40px;
+  }
+
+  h5 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  .menu-title {
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  button {
+    font-size: 16px;
+    padding: 0 1.5em;
+    height: 35px;
+  }
+
+  h5 {
+    font-size: 14px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .menu-title {
+    font-size: 24px;
+  }
+}

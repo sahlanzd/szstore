@@ -1,0 +1,225 @@
+/* Mengatur box-sizing untuk seluruh elemen */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to top, #00111c, #00131f, #e4f2fb);
+  color: #333;
+  overflow-x: hidden; /* Menghindari scroll horizontal */
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0);
+  color: #000000;
+  padding: 10px 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.logo-icon {
+  width: 85px;
+  height: 80px;
+  line-height: 100px;
+  text-align: center;
+  border-radius: 50%;
+  color: white;
+  font-weight: bold;
+  background: linear-gradient(
+    45deg,
+    #160000,
+    #352000,
+    #858500
+  ); /* Gradient warna awal */
+  background-size: 200% 200%; /* Ukuran besar untuk animasi gradient */
+  animation: rotateBackground 30s linear infinite,
+    changeColor 5s linear infinite; /* Animasi perubahan warna dan pergerakan gradient */
+}
+
+.logo i {
+  color: #989898;
+  font-size: 3em;
+}
+
+.main {
+  padding: 20px;
+  max-width: 1200px; /* Mengatur lebar maksimum */
+  margin: 0 auto; /* Tengah halaman */
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 10px 10px;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.button-container {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.button-container button {
+  padding: 10px 40px;
+  margin: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #000000de;
+  color: white;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, border 0.5s ease,
+    border-radius 0.3s ease;
+  animation: rotateBackground 30s linear infinite,
+    changeColor 5s linear infinite;
+}
+
+.button-container button:hover {
+  background: linear-gradient(45deg, #160000, #352000, #858500);
+  border: 1px solid #ffffff;
+  border-radius: 50% 50px 50px 50px 50px;
+  transition: background-color 0.3s ease, border 0.5s ease,
+    border-radius 0.3s ease;
+  animation: rotateBackground 30s linear infinite,
+    changeColor 5s linear infinite;
+  color: #8c8c8c;
+}
+@keyframes rotateBackground {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+@keyframes changeColor {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+h1 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.75em;
+  color: #a9a9a9;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.1em;
+  color: #a9a9a9;
+}
+
+section {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.845);
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+section h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #555555;
+}
+
+section p {
+  font-size: 1.1em;
+  color: #555555;
+}
+.latest-news ul,
+.customer-testimonials ul {
+  list-style-type: none;
+  padding: 0;
+  color: #555555;
+}
+
+.latest-news ul li,
+.customer-testimonials ul li {
+  background: linear-gradient(to top, #00000079, #e1e1e1);
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact form input,
+.contact form textarea {
+  padding: 20px;
+  margin: 10px 0;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  width: 100%; /* Lebar penuh dalam form */
+}
+
+.contact form input[type="submit"] {
+  font-family: "Poppins", sans-serif;
+  border-radius: 5px;
+  background-color: #002034;
+  color: #fff;
+  border: none;
+  position: relative;
+  height: 50px;
+  width: auto;
+  font-size: 20px;
+  padding: 0 5em;
+  cursor: pointer;
+  transition: 900ms ease all;
+  outline: none;
+}
+
+.contact form input[type="submit"]:hover {
+  background: linear-gradient(to top, #cfcfcf, #100000ac);
+  color: #002034;
+  border-radius: 30px;
+  box-shadow: 1px 5px 10px rgb(3, 0, 0);
+}
+.map {
+  text-align: center;
+}
+
+#map {
+  height: 400px; /* Atur ketinggian sesuai kebutuhan Anda */
+  width: 100%; /* Penuhi lebar kontainer */
+  margin-top: 20px; /* Sesuaikan margin sesuai kebutuhan Anda */
+}
+/* Tambahkan gaya untuk ikon peta */
+.map-icon {
+  width: 100px; /* Sesuaikan ukuran sesuai kebutuhan */
+  height: auto; /* Biarkan tinggi disesuaikan secara otomatis */
+  display: block; /* Agar gambar berada di tengah */
+  margin: 0 auto; /* Membuat gambar berada di tengah */
+  margin-top: 20px; /* Atur margin atas sesuai kebutuhan */
+}

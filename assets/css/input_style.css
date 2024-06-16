@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+h1 {
+  font-family: "Poppins", sans-serif;
+  color: #330000; /* Warna teks h1 */
+  margin-top: -20px;
+  font-size: 20px;
+}
+
+button {
+  font-family: "Poppins", sans-serif;
+  border-radius: 25px;
+  background: linear-gradient(
+    to left,
+    #1f0000,
+    #330000
+  ); /* Warna latar belakang tombol */
+  color: #ffffff;
+  border: none;
+  position: relative;
+  height: 45px;
+  width: auto;
+  font-size: 20px;
+  padding: 0 2em;
+  cursor: pointer;
+  transition: 900ms ease all;
+  outline: none;
+  margin: 0px 20px;
+}
+
+button:hover {
+  background: linear-gradient(to bottom, #ffffff, #330000ac);
+  color: #560000;
+  box-shadow: 0px 10px 25px rgba(48, 0, 0, 0.477);
+  font-size: 20px;
+  transition: 0.1s;
+}
+
+button:before,
+button:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2px;
+  width: 0;
+  background: linear-gradient(
+    to left,
+    #ffbad1,
+    #430000
+  ); /* Warna garis tambahan */
+  transition: 400ms ease all;
+}
+
+button:after {
+  right: inherit;
+  top: inherit;
+  left: 0;
+  bottom: 0;
+}
+
+button:hover:before,
+button:hover:after {
+  width: 100%;
+  transition: 800ms ease all;
+}
+
+h5 {
+  color: #1f6d59;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  margin: 0;
+}
+
+lottie-player {
+  margin-top: 20px;
+  color: #330000;
+}
+
+/* Media Query untuk perangkat dengan lebar maksimal 768px (tablet) */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 18px;
+  }
+
+  button {
+    font-size: 18px;
+    padding: 0 1.5em;
+  }
+
+  h5 {
+    font-size: 18px;
+  }
+
+  lottie-player {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+/* Media Query untuk perangkat dengan lebar maksimal 480px (ponsel) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 18px;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 0 1em;
+    margin: 0px 20px;
+  }
+
+  h5 {
+    font-size: 16px;
+  }
+
+  lottie-player {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Menempatkan konten di tengah vertikal pada layar */
+}
+
+.center-content {
+  text-align: center;
+}

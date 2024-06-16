@@ -1,0 +1,178 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+/* Base Styles */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  color: #330000; /* Warna teks utama */
+  background-color: #ffffff; /* Warna latar belakang */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+h2 {
+  font-size: 30px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+h5 {
+  font-size: 14px;
+  margin-top: 0;
+  margin-bottom: -25px;
+  color: #330000; /* Warna teks h5 */
+}
+
+.lottie-player {
+  background-color: #ffffff;
+  margin-top: 10px; /* Mengurangi margin-top agar lebih dekat dengan border kotak */
+  color: #330000;
+}
+
+/* Form Styles */
+.glass {
+  padding: 30px;
+  max-width: 900px;
+  width: 100%;
+  background-color: #ffff;
+  box-shadow: 0 8px 32px 0 rgba(67, 0, 0, 0.37);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+form table {
+  padding: 15px;
+  background-color: #e7e7e7;
+  box-shadow: 0 8px 32px 0 rgba(67, 0, 0, 0.37);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+input[type="text"],
+select {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin: 5px 0;
+  display: inline-block;
+  border: 1px solid #330000; /* Warna border input */
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-around; /* Mengatur jarak antara tombol */
+  margin-top: 20px;
+}
+
+button,
+#update {
+  border-radius: 25px;
+  background: linear-gradient(
+    to left,
+    #750000,
+    #330000
+  ); /* Warna latar belakang tombol */
+  color: #fff;
+  border: 1px solid #330000; /* Warna border tombol */
+  height: 40px;
+  width: auto;
+  position: relative;
+  font-size: 20px;
+  padding: 0 2em;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s; /* Menambahkan transisi smooth */
+  outline: none;
+  margin: 0 10px; /* Mengatur margin tombol */
+}
+
+button:hover,
+#update:hover {
+  background: linear-gradient(to bottom, #ffffff, #330000ac);
+  color: #560000;
+  box-shadow: 0px 5px 10px rgba(48, 0, 0, 0.477); /* Mengurangi ukuran bayangan */
+}
+
+button:before,
+button:after,
+#update:before,
+#update:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2px;
+  width: 0;
+  background: linear-gradient(to left, #ffbad1, #430000);
+  transition: width 0.3s; /* Menambahkan transisi smooth */
+}
+
+button:after,
+#update:after {
+  right: inherit;
+  top: inherit;
+  left: 0;
+  bottom: 0;
+}
+
+button:hover:before,
+button:hover:after,
+#update:hover:before,
+#update:hover:after {
+  width: 100%;
+}
+
+/* Media Query untuk layar kecil */
+@media (max-width: 768px) {
+  #update {
+    box-shadow: 0px 2px 5px rgba(48, 0, 0, 0.477); /* Mengurangi ukuran bayangan */
+  }
+
+  .button-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  button,
+  #update {
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 30px;
+    height: 40px;
+  }
+}
+
+/* Tanpa scroll */
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+.glass {
+  height: 100%;
+  overflow: auto; /* Jika konten melebihi ketinggian layar, akan ada overflow */
+}
+
+/* Media Queries untuk Responsif */
+@media only screen and (max-width: 768px) {
+  .glass {
+    max-width: 95%;
+  }
+
+  button,
+  #update {
+    font-size: 16px;
+    padding: 0 1.5em;
+  }
+}

@@ -1,0 +1,185 @@
+/*===== VARIABLES CSS =====*/
+:root {
+  --primary-color: #4f0000; /* Warna utama */
+  --text-color: #e7e7e7; /* Warna teks */
+  --secondary-color: #420000; /* Warna sekunder */
+}
+
+/* Latar belakang formulir */
+body {
+  overflow-x: hidden;
+  width: 100%;
+  justify-content: center;
+  background: #ffffff; /* Warna latar belakang formulir */
+}
+
+/* Button */
+button {
+  font-family: "Poppins", sans-serif;
+  border-radius: 25px;
+  background: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  height: 40px;
+  width: auto;
+  position: relative;
+  font-size: 16px;
+  padding: 1px 30px;
+  cursor: pointer;
+  transition: 800ms ease all;
+  outline: none;
+  margin: 5px 8px;
+}
+
+button:hover {
+  background: linear-gradient(to top, #ffffff, #330000ac);
+  color: #560000;
+  border-radius: 50px;
+  box-shadow: 1px 5px 10px rgb(69, 0, 0);
+}
+
+button:before,
+button:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0px;
+  height: 0px;
+  width: 0px;
+  background: var(--primary-color);
+  transition: 400ms ease all;
+}
+
+button:after {
+  right: inherit;
+  top: inherit;
+  left: 0;
+  bottom: 0;
+}
+
+button:hover:before,
+button:hover:after {
+  width: 100%;
+  transition: 800ms ease all;
+}
+
+/* Keyword */
+#keyword {
+  background: #ffffff;
+  margin-top: 20px;
+  margin-bottom: -10px;
+  border: 3px solid var(--primary-color);
+  padding: 10px 30px;
+  outline: none;
+  border-radius: 15px;
+  width: 450px;
+}
+.table-container {
+  width: 100%; /* Atur lebar sesuai kebutuhan */
+  overflow-x: auto; /* Mengizinkan scroll horizontal */
+}
+
+/* Styled Table */
+.styled-table {
+  border-collapse: collapse;
+  margin: 40px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table .judul {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  text-align: left;
+}
+
+.styled-table .judul th {
+  padding: 15px;
+}
+
+.styled-table .isi td {
+  padding: 15px 10px;
+}
+
+.aksi {
+  background-color: #3f0000;
+  border: 1px solid;
+  color: #420000;
+  border-radius: 10px;
+}
+
+.styled-table tr {
+  border-bottom: 15px solid #3f0000;
+}
+
+.styled-table tr:last-of-type {
+  border-bottom: 10px solid var(--primary-color);
+}
+
+/* h2 */
+h2 {
+  font-family: "Poppins", sans-serif;
+  color: var(--secondary-color);
+  margin-top: 25px;
+  font-size: 35px;
+}
+
+footer {
+  background-color: #2e0000;
+  color: #fff;
+  padding: 10px 10px;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Media Query untuk perangkat dengan lebar maksimal 768px (tablet) */
+@media (max-width: 768px) {
+  button {
+    font-size: 14px;
+    padding: 0px 15px;
+  }
+
+  #keyword {
+    width: 350px;
+    padding: 5px 10px;
+  }
+
+  .styled-table {
+    font-size: 0.8em;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+}
+
+/* Media Query untuk perangkat dengan lebar maksimal 480px (ponsel) */
+@media (max-width: 480px) {
+  button {
+    font-size: 12px;
+    padding: 0px 10px;
+    margin: 5px 4px;
+  }
+
+  #keyword {
+    width: 90%; /* Memaksimalkan lebar input sesuai dengan lebar layar */
+    padding: 10px 15px;
+  }
+
+  .styled-table {
+    font-size: 0.7em;
+    width: 100%; /* Memaksimalkan lebar tabel sesuai dengan lebar layar */
+  }
+
+  .styled-table .judul th,
+  .styled-table .isi td {
+    padding: 15px 10px; /* Mengurangi padding agar lebih sesuai dengan layar kecil */
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+}

@@ -1,0 +1,146 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+
+/*===== VARIABLES CSS =====*/
+:root {
+  --first-color: #330000; /* Warna utama dari form login */
+  --text-color: #330000; /* Warna teks dari form login */
+  --background-color: #e7e7e7; /* Warna background default dari form login */
+}
+
+/*===== BASE STYLES =====*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif; /* Menggunakan font utama dari form login */
+  color: var(--first-color);
+  background-color: var(--background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+h2 {
+  font-family: "Poppins", sans-serif;
+  color: var(--first-color);
+  margin-top: 0%; /* Tidak diubah */
+  margin-bottom: 15px; /* Menambahkan jarak ke bawah */
+  font-size: 30px;
+}
+
+h5 {
+  color: var(--first-color);
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  /* margin-top: -40px; */ /* Dihapus */
+  margin-top: 0; /* Diganti dengan nilai 0 */
+  margin-bottom: -25px; /* Menambahkan jarak ke atas */
+}
+
+lottie-player {
+  margin-top: 10px; /* Menambahkan jarak ke atas */
+  margin-bottom: 20px; /* Menambahkan jarak ke bawah */
+}
+
+.glass {
+  padding-top: 20px;
+  padding-bottom: 15px;
+  width: 700px;
+  background: #e7e7e7; /* Warna background sesuai dengan warna utama dari form login */
+  box-shadow: 0 8px 32px 0 rgba(67, 0, 0, 0.37);
+  /* backdrop-filter: blur(3px); */ /* Hapus atau komentar baris ini */
+  /* -webkit-backdrop-filter: blur(3px); */ /* Hapus atau komentar baris ini */
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+button {
+  font-family: "Poppins", sans-serif;
+  border-radius: 25px;
+  background: var(--first-color);
+  color: #fff;
+  border: none;
+  height: 30px;
+  width: auto;
+  position: relative;
+  font-size: 14px;
+  padding: 0 2em;
+  cursor: pointer;
+  transition: 400ms ease all;
+  outline: none;
+  margin: 0px 10px;
+}
+
+button:hover {
+  background: linear-gradient(to bottom, #c2c2c2, #330000ac);
+  color: #560000;
+  border-radius: 25px;
+  box-shadow: 2px 0px 10px rgb(69, 0, 0);
+}
+
+button:before,
+button:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 0px;
+  width: 0;
+  background: linear-gradient(to left, #570d00, var(--first-color));
+}
+
+button:after {
+  right: inherit;
+  top: inherit;
+  left: 0;
+  bottom: 0;
+}
+
+button:hover:before,
+button:hover:after {
+  width: 100%;
+  transition: 800ms ease all;
+}
+
+form table {
+  font-family: "Poppins", sans-serif;
+  padding: 15px;
+  background-color: var(--background-color);
+  box-shadow: 0 8px 32px 0 rgba(67, 0, 0, 0.37);
+  backdrop-filter: blur(11px);
+  -webkit-backdrop-filter: blur(11px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+#simpan {
+  font-family: "Poppins", sans-serif;
+  border-radius: 25px;
+  background: var(--first-color);
+  color: #fff;
+  border: none;
+  height: 30px;
+  width: auto;
+  position: relative;
+  font-size: 14px;
+  padding: 0 2em;
+  cursor: pointer;
+  transition: 400ms ease all;
+  outline: none;
+  margin-left: 125px;
+  margin-top: 15px;
+}
+
+#simpan:hover {
+  background: linear-gradient(to bottom, #c2c2c2, #330000ac);
+  color: #330000;
+  border-radius: 25px;
+}
